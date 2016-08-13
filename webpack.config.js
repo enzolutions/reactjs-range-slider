@@ -19,7 +19,11 @@ var config = {
         loader : 'babel'
       },
       { test: /\.css$/, exclude: /\.useable\.css$/, loader: "style!css" },
-      { test: /\.useable\.css$/, loader: "style/useable!css" }
+      { test: /\.useable\.css$/, loader: "style/useable!css" },
+      {
+        test: /\.less$/,
+        loader: "style!css!less?strictMath&noIeCompat"
+      }
     ]
   }
 };
